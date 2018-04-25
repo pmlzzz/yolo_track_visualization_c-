@@ -7,13 +7,21 @@ Visualization part: ./visualization/final.php  based on dragit.js
 
 SETUP:
 1. setup the environment of YOLO (https://pjreddie.com/darknet/yolo/)
+
 2. download yolo.weights
+
 3. (compile)
+
 $cd yolo_track_visualization_c-/
+
 $make 
+
 4. output tracking data into file newtrack768x576.csv
+
 $./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights video/test.avi
+
 5.upload tracking data to mysql
+
 6. final.php
 
 ps
