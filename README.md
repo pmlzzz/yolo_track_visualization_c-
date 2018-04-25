@@ -1,44 +1,21 @@
-# yolo_cpp
-C++ed version of Darknet
+# yolo_track_visualization_cpp
+Detection part:C++ version YOLO (https://pjreddie.com/darknet/yolo/ ,https://github.com/for-aiur/yolo_cpp)
+Tracking part: C++ version SORT (https://github.com/abewley/sort, https://github.com/mcximing/sort-cpp)
+Visualization part: ./visualization/final.php  based on dragit.js
 
-This is a repository for the developers who need to integrate yolo into their c++ projects. 
-Only contribution to the original darknet code is a simple wrapper class around object detection functionality. 
-You can immediately start building up a cpp project based on [YOLO](http://pjreddie.com/darknet) object detection. 
+SETUP:
+1. setup the environment of YOLO (https://pjreddie.com/darknet/yolo/)
+2. download yolo.weights
+3. (compile)
+$cd yolo_track_visualization_c-/
+$make 
+4. output tracking data into file newtrack768x576.csv
+$./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights video/test.avi
+5.upload tracking data to mysql
+6. final.php
 
-### What is Yolo and Darknet
-
-Darknet is an open source neural network framework written in C and CUDA. It is fast, easy to install, and supports CPU and GPU computation.
-
-For more information see the [Darknet project website](http://pjreddie.com/darknet).
-
-For questions or issues please use the [Google Group](https://groups.google.com/forum/#!forum/darknet).
-
-### Requirements
-* OpenCV
-* CUDA
-* pthreads
-
-As opposed to the original darknet, it is not possible to compile without CUDA and OpenCV.
-
-### Usage
-
-```sh
-mkdir build
-cd build
-cmake ..
-make 
-```
-
-What you get is the following executables in the source folder. 
-
-* darknet -> This does the same job as the original darknet, but compiled with g++
-* darknet_cpp -> This is a sample application demonstrates the usage of my yolo wrapper
-
-You can copy all auxilary files from original darknet project and run example commands on the darknet website without any adjustment. 
-
-If you want to develop a cpp application just add a new folder in /app folder, configure your cmake environment and there you go.
-
+ps
 ============================================================
 #zzyolo tracking modified
-Files in src:image.cpp demo.cpp
-add:sort.cpp sort.h hungarian.cpp huangarian.h KalmanTracker.cpp KalmanTracker.h
+changed Files in src:image.cpp(control the output) demo.cpp
+add(from SORT project):sort.cpp(control the tracking) sort.h hungarian.cpp huangarian.h KalmanTracker.cpp KalmanTracker.h
