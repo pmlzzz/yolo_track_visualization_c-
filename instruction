@@ -1,0 +1,4 @@
+image.cpp(main) sort.cpp demo.cpp 
+cd yolo_cpp/
+./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights video/test.avi
+
