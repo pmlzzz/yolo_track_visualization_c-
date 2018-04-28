@@ -22,7 +22,7 @@ $./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights video/test.avi
 
 5.upload tracking data to mysql
 
-6. final.php
+6. final.php(https://va.tech.purdue.edu/crowdTracking/test5.php)
 
 ps
 ============================================================
