@@ -23,7 +23,11 @@ $./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights video/test.avi
 5.upload tracking data to mysql
 
 6. final.php(https://va.tech.purdue.edu/crowdTracking/test5.php)
-https://github.com/pmlzzz/yolo_track_visualization_c-/blob/master/visualization.jpg
+
+
+![alt tag](https://github.com/pmlzzz/yolo_track_visualization_c-/blob/master/visualization.jpg)
+
+
 ps
 ============================================================
 #zzyolo tracking modified
